@@ -1,6 +1,3 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) TS template.
 
 ## Available Scripts
 
@@ -17,7 +14,6 @@ You will also see any lint errors in the console.
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
@@ -26,8 +22,6 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ### `npm run eject`
 
@@ -39,8 +33,17 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+### `npm run lint`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Runs ESLint throughout the whole project and fixes the problems based on the rules if it can.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### `npm run format`
+
+Formats the code based on the Prettier config.
+
+
+# Task summary
+
+I create the project with **create react app**, in order not to lose time with the setup. I plannned to use *redux* as a state management library, and *bootstrap* for styling, before getting the assignment description. However, once I've read the assignment, I got rid of *redux* because there is no need to introduce such boilerplate. Instead, I wrapped the state within a custom hook.
+I've also planned to use *react-router*, though it seems it is also unnecessary, I left it as is, with a single route. This is the first time I've used a map API, therefore I choose to go with Google Maps. In the *useAsyncHook*, I'm capturing the error, if I had more time, I'd wrap the Launches view with error boundary, to allow user to try again on error. Instead, I'm displaying an alert within the Launches component. I've managed to render the
+Markers on the map, but couldn't find time to handle on click. I've lost time trying to create API key for Google Maps. The base url of the API, and Google Maps API key can be retrieved from the environment. I wouldn't push the .env file to the repo, but I've done it in case you don't have an API key.  
